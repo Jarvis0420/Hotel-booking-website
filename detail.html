@@ -18,7 +18,7 @@
         }
 
         .hotelImage {
-            height: 500px;
+            height: 400px;
             width: 500px;
             margin: 2% 4% 0% 4%;
         }
@@ -31,7 +31,7 @@
         .socialLogo {
             height: 20px;
             width: 22px;
-            margin-top: 15px;
+            
         }
 
         header {
@@ -40,8 +40,14 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: auto;
-        }
+            height:10%;
+                display: flex;
+                justify-content: space-between;
+
+
+                }
+
+        
 
         footer {
             background-color: rosybrown;
@@ -50,6 +56,11 @@
             position: fixed;
             height: auto;
             top: auto;
+            display: flex;
+                left:0;
+                justify-content:space-between;
+                vertical-align: middle;
+                padding:1%;
         }
 
         .formStyle {
@@ -73,16 +84,56 @@
             text-decoration: none;
             color: black;
             font-weight: bold;
+            margin-right: 10px;
         }
 
-        #contactus {
-            left: 15px;
-            position: relative;
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            vertical-align: middle;
+        #linkSty{
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
         }
+        .mainBox {
+                width:100%;
+                margin:0;
+                padding: 2%;
+                height:50%;
+                box-sizing: border-box;
+                display: flex;
+            }
+            .sideBox1 {
+                width: 60%;
+		 	    height: auto;
+                border: 2px solid black;
+                float:right;
+                display: flex;
+                justify-content: center;
+            }
+            .sideBox2 {
+                width: 40%;
+		 	    height: 100%;
+                float:left;
+                overflow: hidden;
+                border: 2px solid black;
+            }
+            .labelStyle {
+                margin: 2%;
+                height:max-content;
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2%;
+            }
+            .submitstyle {
+                padding: 1% 2%;
+                margin-left: 45%;
+                margin-top: 2%;
+                margin-bottom: 2%;  
+            }
+
+            .length {
+                width: 60%;
+            }
     </style>
 </head>
 
@@ -93,29 +144,44 @@
             <a href="login.html" target="_blank" class="login">Login</a>
         </header>
         <div>
-            <img class="hotelImage"
-                src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"
-                alt="Radisson Blu Hotel"><br />
-            <form class="formStyle" action="payment.html">
-                <label for="adults">Adults:</label>
-                <input type="number" id="adults" name="number" min="1" required><br>
+            <div class="mainBox">
+                <div class="sideBox1">
+                    <img class="hotelImage"
+                        src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg">
+                </div>
+                <div class="sideBox2">
+                    <form action="payment.html" class="formStyle">
 
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br />
+                        <div class="labelStyle">
+                            <label for="adults">Adults:</label>
+                            <input type="number" id="adults" name="number" min="1" required class="length">
+                        </div><br>
 
-                <label for="date">From Date:</label>
-                <input type="date" id="date" name="fromDate" required><br />
+                        <div class="labelStyle">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required class="length">
+                        </div><br>
 
-                <label for="date">To Date:</label>
-                <input type="date" id="todate" name="toDate" required><br />
+                        <div class="labelStyle">
+                            <label for="from">From Date:</label>
+                            <input type="date" id="from" name="from" required class="length">
+                        </div><br>
+                        <div class="labelStyle">
+                            <label for="toDate">To Date:</label>
+                            <input type="date" id="toDate" name="toDate" required class="length">
+                        </div><br>
 
-                <label>Total:</label>
-                <input type="text" id="total" name="price" readonly><br />
+                        <div class="labelStyle">
+                            <label for="total">Total</label>
+                            <input type="text" id="total" name="total" readonly="readonly" class="length">
+                        </div><br>
 
-                <input type="submit" value="Book Now">
+                        <input type="submit" value="Book Now" class="submitstyle">
 
 
-            </form>
+                    </form>
+                </div>
+            </div>
             <div id="detailStyle">
                 <h2>Radisson Blu Hotel</h2>
                 <p>RATING</p>
@@ -128,23 +194,26 @@
                     <li>Fitness center</li>
                     <li>Pool</li>
                 </ul>
-                <h5>DESCRIPITION</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa beatae doloremque temporibus
-                    perspiciatis delectus earum, odit dolorum quaerat deleniti velit ratione laboriosam illum eius ab at
-                    aliquam, qui nihil?</p>
+                <div>
+                    <h5>DESCRIPITION</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa beatae doloremque
+                        temporibus
+                        perspiciatis delectus earum, odit dolorum quaerat deleniti velit ratione laboriosam illum eius
+                        ab at
+                        aliquam, qui nihil?</p>
+                </div>
             </div>
         </div>
         <footer>
-            <span><a href="contact.html" target="_blank" id="contactus">Contact Us</a></span>
-            <span style="padding-left: 85%;">
-                <a href="https://www.facebook.com" target="_blank"><img class="socialLogo"
+            <span><a href="contact.html" target="_blank" id="linkSty">Contact Us</a></span>
+            <span> © 2020 ROOM SEARCH PVT. LTD</span>
+            <span style="margin-right: 30px;"><a href="https://www.facebook.com" target="_blank"><img class="socialLogo"
                         src="assests/images/facebook.png" alt="facebooklogo"></a>
                 <a href="https://www.instagram.com" target="_blank"><img class="socialLogo"
                         src="assests/images/instagram.png" alt="instagramlogo"></a>
                 <a href="https://www.twitter.com" target="_blank"><img class="socialLogo"
                         src="assests/images/twitter.png" alt="twitterlogo"></a>
             </span>
-            <span style="padding-left: 40%;"> © 2020 ROOM SEARCH PVT. LTD</span>
         </footer>
     </div>
 </body>
