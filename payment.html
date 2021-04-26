@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Payment</title>
     <style>
         body {
@@ -9,7 +10,12 @@
             height: 100%;
             margin: 0px;
             background-color: #e0e0e0;
+            font-family: 'Ubuntu', sans-serif;
         }
+        #full{
+                margin-top: 80px;
+                margin-bottom: 80px;
+            }
 
         .hotelImage {
             height: 500px;
@@ -35,15 +41,47 @@
         .socialLogo {
             height: 20px;
             width: 22px;
+            margin-top:15px;
         }
 
         header {
             background-color: rosybrown;
+            position: fixed;
+                top: 0;
+                left:0;
+                width: 100%;
+                height:auto;
         }
 
         footer {
             background-color: rosybrown;
-        }
+            width: 100%;
+                bottom: 0;
+                position: fixed;
+                height: auto;
+            	top:auto;
+            }
+            .login {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+            #contactus{
+                left: 15px;
+                position: relative;
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                vertical-align: middle;
+            }
+            #linkSty{
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
 
         .customer {
             margin: 2%;
@@ -59,10 +97,10 @@
 </head>
 
 <body>
-    <div>
+    <div id="full">
         <header>
             <a href="index.html"><img src="assests\images\logo.png" alt="logo" class="logo"></a>
-            <a href="login.html" target="_blank">Login</a>
+            <a href = "login.html" target="_blank" class="login">Login</a> 
         </header>
         <div>
             <div class="info">
@@ -85,18 +123,17 @@
                 <p><b>Total Amount:</b> Rs. 10000</p>
                 </div>
 
-            <a href="payment.html">Pay Now</a>
+                <div><a href = "" id="linkSty">Pay Now</a></div>
 
         </div>
         <footer>
-            <a href="contact.html">Contact Us</a><br />
-            <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="Facebook"
-                    class="socialLogo"></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="Instagram"
-                    class="socialLogo"></a>
-            <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="Twitter"
-                    class="socialLogo"></a>
-            <p>© 2020 ROOM SEARCH PVT.LTD.</p>
+            <span><a href = "contact.html" target="_blank" id="contactus">Contact Us</a></span>
+            <span style="padding-left: 85%;">
+            <a href = "https://www.facebook.com" target="_blank"><img class ="socialLogo" src = "assests/images/facebook.png"  alt ="facebooklogo"></a>
+            <a href = "https://www.instagram.com" target="_blank"><img class ="socialLogo" src = "assests/images/instagram.png" alt ="instagramlogo"></a>
+            <a href = "https://www.twitter.com" target="_blank"><img class ="socialLogo" src = "assests/images/twitter.png" alt ="twitterlogo"></a>
+            </span>
+            <span style = "padding-left: 40%;"> © 2020 ROOM SEARCH PVT. LTD</span>
         </footer>
     </div>
 </body>
